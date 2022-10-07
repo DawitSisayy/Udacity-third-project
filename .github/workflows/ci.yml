@@ -16,5 +16,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: echo "Hello world"
-    - run: ls -l
+    - run: docker-compose -f docker-compose-build.yaml build --parallel
+    - run: docker tag udagram-frontend:local dawitsisay/udagram-frontend:v1
+    - run: docker tag reverseproxy dawitsisay/reverseproxy:v1
+    - run: docker tag udagram-api-feed dawitsisay/udagram-api-feed:v1
+    - run: docker tag udagram-api-user dawitsisay/udagram-api-user:v1 
+    - run: docker push dawitsisay/udagram-frontend:v1
+    - run: docker push dawitsisay/reverseproxy:v1
+    - run: docker push udagram-api-feed dawitsisay/udagram-api-feed:v1
+    - run: docker push dawitsisay/udagram-api-user:v1 
+
+
+
