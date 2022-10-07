@@ -21,6 +21,7 @@ jobs:
     - run: docker tag reverseproxy dawitsisay/reverseproxy:v1
     - run: docker tag udagram-api-feed dawitsisay/udagram-api-feed:v1
     - run: docker tag udagram-api-user dawitsisay/udagram-api-user:v1 
+    - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
     - run: docker push dawitsisay/udagram-frontend:v1
     - run: docker push dawitsisay/reverseproxy:v1
     - run: docker push dawitsisay/udagram-api-feed:v1
