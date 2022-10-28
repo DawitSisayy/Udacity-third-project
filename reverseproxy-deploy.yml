@@ -5,7 +5,7 @@ metadata:
   labels:
     app: reverseproxy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: reverseproxy
@@ -17,6 +17,15 @@ spec:
       containers:
       - name: reverseproxy
         image: dawitsisay/reverseproxy:v1
+        imagePullPolicy: Always
+        resources: 
+          requests: 
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8080
+      restartPolicy: Always  
         
