@@ -29,7 +29,7 @@ jobs:
             docker tag udagram-api-user dawitsisay/udagram-api-user
             
             docker build -t udagram-frontend ./udagram-frontend
-            docker tag udagram-frontend antenehse/udagram-frontend
+            docker tag udagram-frontend dawitsisay/udagram-frontend
 
             docker build -t reverseproxy ./udagram-reverseproxy
             docker tag reverseproxy dawitsisay/reverseproxy
