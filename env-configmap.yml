@@ -4,9 +4,9 @@ metadata:
   name: udagram-env
 data:
   # property-like keys; each key maps to a simple value
-  POSTGRES_HOST: mydb-instance.cx7zjiy4wdv7.us-east-1.rds.amazonaws.com
-  POSTGRES_DB: dawitdb
-  AWS_BUCKET: udagram-245378921898-dev
+  POSTGRES_HOST: udagram-instance.c1gubwjbgrcf.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_BUCKET: udagram-buket
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: testing

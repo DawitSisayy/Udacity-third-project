@@ -16,7 +16,14 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: dawitsisay/udagram-api-user:v1
+        image: dawitsisay/udagram-api-user
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        resources: 
+          requests:
+            memory: "1024Mi"
+            cpu: "250m"
+          limits:
+            memory: "2048Mi"
+            cpu: "500m" 

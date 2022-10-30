@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: dawitsisay/reverseproxy:v1
+        image: dawitsisay/reverseproxy
         imagePullPolicy: Always
         resources: 
           requests: 
-            memory: "64Mi"
+            memory: "1024Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
+            memory: "2048Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080
